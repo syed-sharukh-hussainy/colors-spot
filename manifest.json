@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "ColorSpot",
+  "description": "Color Spot is a free Chrome extension for color enthusiasts.",
+  "version": "1.0",
+  "author": "Syed Sharukh Hussainy",
+  "icons": {
+    "16": "icon/colorspoticon.png",
+    "48": "icon/colorspoticon.png",
+    "128": "icon/colorspoticon.png"
+  },
+  "permissions": ["activeTab", "storage", "scripting", "tabs", "notifications"],
+  "action": {
+    "default_icon": "icon/colorspoticon.png",
+    "default_title": "ColorSpot",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

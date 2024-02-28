@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 350px;
+  background-color: #ffffff;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tabs-title {
+  background-color: #d8eefe;
+  padding: 15px 0;
+  cursor: pointer;
+  text-align: center;
+  color: #094067;
+  transition: all 0.2s ease-in-out;
+}
+
+.emoji {
+  font-size: 1.5rem;
+  display: block;
+}
+
+.content-box .content {
+  display: none;
+}
+
+.content {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.content-box .content.active {
+  display: block;
+}
+
+.tabs .active {
+  background-color: #fff;
+  color: #193154;
+  transition: all 0.2s ease-in-out;
+}
+
+.color-picker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eyedropper-btn {
+  background-color: #d8eefe;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.eyedropper-btn:hover {
+  background-color: #ceeaff;
+}
+
+.eyedropper-img {
+  width: 18px;
+  height: 18px;
+}
+
+.selected-color {
+  width: 230px;
+  height: 130px;
+  /* background-color: #3da9fc; */
+  border-radius: 5px;
+  position: relative;
+  /* border: 1px solid rgb(224, 224, 224); */
+  border: 1px solid rgba(9, 64, 103, 0.2);
+}
+
+.selected-color-name {
+  text-align: center;
+  font-size: 0.8rem;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: aliceblue;
+  position: absolute;
+  bottom: 0;
+  border-radius: 5px;
+}
+
+.color-picker-options {
+  margin-top: 40px;
+}
+.hex-color,
+.rgb-color,
+.hsl-color,
+.hsv-color {
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.color-tag {
+  text-align: center;
+  width: 55px;
+  font-size: 11px;
+  /* color: #9c9c9c; */
+  color: #5f6c7b;
+  letter-spacing: 1px;
+}
+.hex-color-value {
+  width: 153.4px;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  outline: none;
+  font-weight: bold;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  border: 0.8px solid rgba(9, 64, 103, 0.1);
+  color: #094067;
+  transition: all 0.2s ease-in-out;
+}
+
+.hex-custom-color {
+  width: 230px;
+  display: flex;
+}
+.add-hex-color {
+  width: 76.6px;
+  cursor: pointer;
+  border: 0.8px solid rgba(9, 64, 103, 0.1);
+
+  outline: none;
+  background-color: #f8f8f8;
+  color: #094067;
+  font-size: 12px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type='text']:focus {
+  border: 1px solid rgb(224, 224, 224);
+}
+
+.hex-color-value:hover,
+.add-hex-color:hover {
+  background-color: #f1f1f1;
+}
+
+.color {
+  font-size: 12px;
+  background-color: #f8f8f8;
+}
+
+.color-value {
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.color {
+  width: calc(100% / 3);
+  padding: 10px;
+  border: 0.8px solid rgba(9, 64, 103, 0.1);
+  color: #094067;
+}
+
+#history-color-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 5px;
+}
+
+.history-color {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 5px;
+}
+
+.color-exists,
+.color-copied,
+.invalid-hex,
+.color-added {
+  text-align: center;
+  color: #aaa;
+  margin-top: 20px;
+  font-weight: normal;
+  font-style: italic;
+  display: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.history-header {
+  display: flex;
+  justify-content: end;
+}
+
+#clear-all {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #515e7b;
+  font-weight: 600;
+  margin-bottom: 30px;
+  display: none;
+}
+
+#clear-all:hover {
+  color: #434f69;
+}
+
+.empty-list-prompt,
+.cant-access {
+  font-size: 14px;
+  text-align: center;
+  width: 250px;
+  font-weight: 500;
+  padding: 50px 0;
+  color: #5f6c7b;
+  display: none;
+  margin: 0 auto;
+}

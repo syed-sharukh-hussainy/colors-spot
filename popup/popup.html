@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <h3 class="tabs-title active">Picker</h3>
+        <h3 class="tabs-title">History</h3>
+      </div>
+      <div class="content-box">
+        <!-- Color Picker Block -->
+        <div class="content active">
+          <h3 class="cant-access">You can't pick colors from this page!</h3>
+          <div class="color-picker">
+            <div class="color-picker-header">
+              <div id="eyedropper-btn" class="eyedropper-btn">
+                <img class="eyedropper-img" src="../icon/eye-dropper.svg" />
+              </div>
+              <div class="selected-color">
+                <h2 class="selected-color-name">White</h2>
+              </div>
+            </div>
+            <div class="color-picker-options">
+              <div class="hex-color">
+                <h2 class="color-tag">HEX</h2>
+                <div class="hex-custom-color">
+                  <input
+                    class="hex-color-value"
+                    type="text"
+                    placeholder="#FFFFFF"
+                  />
+                  <button class="add-hex-color">ADD</button>
+                </div>
+              </div>
+              <div class="rgb-color">
+                <h2 class="color-tag">RGB</h2>
+                <div class="color-value">
+                  <span class="color rgb">255</span>
+                  <span class="color rgb">255</span>
+                  <span class="color rgb">255</span>
+                </div>
+              </div>
+              <div class="hsl-color">
+                <h2 class="color-tag">HSL</h2>
+                <div class="color-value">
+                  <span class="color hsl">0</span>
+                  <span class="color hsl">0</span>
+                  <span class="color hsl">100</span>
+                </div>
+              </div>
+
+              <div class="hsv-color">
+                <h2 class="color-tag">HSV</h2>
+                <div class="color-value">
+                  <span class="color hsv">0</span>
+                  <span class="color hsv">0</span>
+                  <span class="color hsv">100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="invalid-hex">Invalid hex code</h3>
+          <h3 class="color-added">Color added to history</h3>
+          <h3 class="color-exists">Color already exists in history</h3>
+        </div>
+
+        <!-- Color History Block -->
+        <div class="content">
+          <div class="history">
+            <div class="history-header">
+              <button id="clear-all">Clear all</button>
+            </div>
+            <ul id="history-color-list"></ul>
+            <h2 class="empty-list-prompt">
+              You haven't picked any colors yet to add to your history.
+            </h2>
+          </div>
+          <h3 class="color-copied">Copied to clipboard!</h3>
+        </div>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
